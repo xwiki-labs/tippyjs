@@ -4,7 +4,7 @@
 * @return {Elements[]}
 */
 export default function getArrayOfElements(selector) {
-    if (selector instanceof Element) {
+    if (selector instanceof Element || /Element/.test(Object.prototype.toString.call(selector))) {
         return [selector]
     }
 

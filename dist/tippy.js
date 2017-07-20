@@ -37,12 +37,11 @@ var Selectors = {
     ARROW: '[x-arrow]',
     TOOLTIPPED_EL: '[data-tooltipped]',
     CONTROLLER: '[data-tippy-controller]'
-};
 
-/**
-* The default settings applied to each instance
-*/
-var Defaults = {
+    /**
+    * The default settings applied to each instance
+    */
+};var Defaults = {
     html: false,
     position: 'top',
     animation: 'shift',
@@ -70,13 +69,12 @@ var Defaults = {
     touchHold: false,
     performance: false,
     popperOptions: {}
-};
 
-/**
-* The keys of the defaults object for reducing down into a new object
-* Used in `getIndividualSettings()`
-*/
-var DefaultsKeys = Browser.SUPPORTED && Object.keys(Defaults);
+    /**
+    * The keys of the defaults object for reducing down into a new object
+    * Used in `getIndividualSettings()`
+    */
+};var DefaultsKeys = Browser.SUPPORTED && Object.keys(Defaults);
 
 /**
 * Hides all poppers
@@ -458,7 +456,7 @@ function followCursorHandler(e) {
 * @return {Elements[]}
 */
 function getArrayOfElements(selector) {
-    if (selector instanceof Element) {
+    if (selector instanceof Element || /Element/.test(Object.prototype.toString.call(selector))) {
         return [selector];
     }
 
