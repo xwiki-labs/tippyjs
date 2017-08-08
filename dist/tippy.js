@@ -30,47 +30,6 @@ var Store = [];
 * Selector constants used for grabbing elements
 */
 var Selectors = {
-<<<<<<< HEAD
-    POPPER: '.tippy-popper',
-    TOOLTIP: '.tippy-tooltip',
-    CONTENT: '.tippy-tooltip-content',
-    CIRCLE: '[x-circle]',
-    ARROW: '[x-arrow]',
-    TOOLTIPPED_EL: '[data-tooltipped]',
-    CONTROLLER: '[data-tippy-controller]'
-
-    /**
-    * The default settings applied to each instance
-    */
-};var Defaults = {
-    html: false,
-    position: 'top',
-    animation: 'shift',
-    animateFill: true,
-    arrow: false,
-    arrowSize: 'regular',
-    delay: 0,
-    trigger: 'mouseenter focus',
-    duration: 350,
-    interactive: false,
-    interactiveBorder: 2,
-    theme: 'dark',
-    size: 'regular',
-    distance: 10,
-    offset: 0,
-    hideOnClick: true,
-    multiple: false,
-    followCursor: false,
-    inertia: false,
-    flipDuration: 350,
-    sticky: false,
-    stickyDuration: 200,
-    appendTo: null,
-    zIndex: 9999,
-    touchHold: false,
-    performance: false,
-    popperOptions: {}
-=======
   POPPER: '.tippy-popper',
   TOOLTIP: '.tippy-tooltip',
   CONTENT: '.tippy-tooltip-content',
@@ -78,12 +37,11 @@ var Selectors = {
   ARROW: '[x-arrow]',
   TOOLTIPPED_EL: '[data-tooltipped]',
   CONTROLLER: '[data-tippy-controller]'
-};
 
-/**
-* The default settings applied to each instance
-*/
-var Defaults = {
+  /**
+  * The default settings applied to each instance
+  */
+};var Defaults = {
   html: false,
   position: 'top',
   animation: 'shift',
@@ -112,13 +70,11 @@ var Defaults = {
   performance: false,
   dynamicTitle: false,
   popperOptions: {}
-};
->>>>>>> upstream/master
 
-    /**
-    * The keys of the defaults object for reducing down into a new object
-    * Used in `getIndividualSettings()`
-    */
+  /**
+  * The keys of the defaults object for reducing down into a new object
+  * Used in `getIndividualSettings()`
+  */
 };var DefaultsKeys = Browser.SUPPORTED && Object.keys(Defaults);
 
 /**
@@ -502,15 +458,9 @@ function followCursorHandler(e) {
 * @return {Element[]}
 */
 function getArrayOfElements(selector) {
-<<<<<<< HEAD
-    if (selector instanceof Element || /Element/.test(Object.prototype.toString.call(selector))) {
-        return [selector];
-    }
-=======
-  if (selector instanceof Element) {
+  if (selector instanceof Element || /Element/.test(Object.prototype.toString.call(selector))) {
     return [selector];
   }
->>>>>>> upstream/master
 
   if (Array.isArray(selector)) {
     return selector;
